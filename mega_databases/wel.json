@@ -2,5 +2,10 @@
   "666087465429499944": {
     "canal": "717809620709540004",
     "mensaje": "El usuario **{user:tag}** Acabo de entrar al servidor **{server}** y ahora somos **{members} miembros**"
+  },
+  "691551259529838682": {
+    "canal": "725342726861881405",
+    "mensaje": "> Bienvenido {user:tag}\n Esperamos que la pases bien en nuestro server **{server}** por cierto se me olvidaba, gracias a ti somos {members}",
+    "wrole": "719729619514687488"
   }
 }
