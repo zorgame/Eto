@@ -1,9 +1,9 @@
 module.exports = {
 	config: {
 		nombre: 'geometry',
-		alias: '',
+		alias: ["geo"],
 		descripcion: 'Crea un logo con la fuente de geometry dash',
-		category: 'util'
+		category: 'img'
 	},
 
 	run: async (client, message, args) => {

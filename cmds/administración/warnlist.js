@@ -15,7 +15,7 @@ module.exports = {
 		let normal = message.mentions.users.first() || message.author 
 		
 		if (!warn.tiene(`${message.guild.id}.${normal.id}`))
-			return message.channel.send('Este usuario no tiene warns/advertencias');
+			return message.channel.send(`<a:a12:727735540551516240> | El usuario ${normal.tag} no tiene\nwarns/advertencias`);
 		let total = await warn.obtener(`${message.guild.id}.${normal.id}`);
 		
 	var i = 1

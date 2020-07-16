@@ -1,7 +1,7 @@
 module.exports = {
 	config: {
 		nombre: 'purge',
-		alias: '',
+		alias: ['clear'],
 		descripcion: 'Elimina los mensajes de un miembro',
 		category: 'admin'
 	},
@@ -11,13 +11,13 @@ module.exports = {
 
 		if (!permisos) {
 			return message.channel.send(
-				'No tienes **permisos** para ejecutar el comando'
+				'<a:a5:708890598110658652> | No tienes permisos de: **Gestionar Mensajes**'
 			);
 		}
 
 		if (!message.guild.me.hasPermission('MANAGE_MESSAGES')) {
 			return message.channel.send(
-				'No tengo el permiso de `Gestionar los mensajes` para ejecutar esta funcion'
+				'<a:a5:708890598110658652> | No tengo permisos de **Gestionar Mensajes**'
 			);
 		}
 
@@ -34,7 +34,7 @@ el usuario puede escribir el nombre de usuario, ID o puede mencionar a un usuari
 				); //aquí obtenemos el usuario
 
 		let cantidad =
-			member && !isNaN(args[1]) ? args[1] : !isNaN(args[0]) ? args[0] : 50;
+			member && !isNaN(args[1]) ? args[1] : !isNaN(args[0]) ? args[0] : 100;
 
 		const messages = await message.channel.messages.fetch({ limit: 100 }); //obtenemos los últimos 200 mensajes enviados al canal
 
@@ -45,7 +45,7 @@ el usuario puede escribir el nombre de usuario, ID o puede mencionar a un usuari
 		let msg = messages.filter(filtro); //hacemos el filtro a messages que es la variable donde están todos los mensajes
 
 		if (msg.array().length < 1)
-			return message.channel.send('No hay mensajes por eliminar');
+			return message.channel.send('<a:a12:727735540551516240> | No hay mensajes que eliminar');
 		/*
 nos aseguramos que msg tenga mensajes para eliminar
 */

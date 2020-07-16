@@ -33,7 +33,7 @@ module.exports = {
 
 			let alias = command.alias;
 			let nombre = command.nombre;
-			let descripción = command.descripcion
+			let descripción = command.descripcion;
 
 			embed
 				.setColor('64ffc4')
@@ -43,23 +43,13 @@ module.exports = {
 
 			message.channel.send(embed);
 		} else {
-		  
-		const embed1 = new MessageEmbed() 
+			const embed1 = new MessageEmbed()
 				.setTitle('____Ayuda - Sobre mi____')
 				.setColor('64ffc4')
-				.setDescription(
-					`Hola!, yo soy **${
-						client.user.username
-					}** Mi papel en este momento es servir a mis usuarios que me usan, abajo tendrás más información de mi`
-				)
-				.addField(
-					`⦿ Inicio`,
-					`Mi prefix es **${prefix}** El cual lo usaras para todos mis comandos`
-				)
-				.addField(
-					`⦿ Mis comandos`,
-					`Si quieres ver mis comandos escribe: \n\`${prefix}comandos\`: Mandare un mensaje para que reacciones y pruebes mis comandos`
-				)
+				.setDescription(`Hola!, soy **${client.user.username}** , Soy un bot de entretenimiento. Prescisamente abajo veras mas informacion`)
+				.addField("Inicio", `> • Mi prefix global es **ey!**\n> • Mi prefix en el servidor es **${prefix}**\n> • Recuerda que con el prefix del servidor sera con el usaras en todos mis comandos`)
+				.addField("Comandos", `Para ver mis comandos tienes las siguientes opciones\n\`\`\`ini\n[\n${prefix}commands\n${prefix}commands --all\n${prefix}commands --dm\n]\`\`\``)
+				.addField("Error?", `> Si tienes algun error prescisamente anajo de este mensaje estan los links de soporte o puedes escribir **${prefix}help <comando>**`)
 				.setImage(
 					'https://i.ibb.co/zbqgTP0/d99a9b05fca2212456d87157ecf205ca.gif'
 				)
@@ -67,8 +57,8 @@ module.exports = {
 					'https://vignette.wikia.nocookie.net/antagonists/images/e/e6/Eto-Yoshimura.jpg/revision/latest?cb=20190622165004'
 				)
 				.addField(
-					'⦿ Adicional',
-					`Si tienes alguna duda o problema con algún comando escribe \`${prefix}help <comando>\``
+					'Invitaciones',
+					`**[Invitación](https://discordapp.com/oauth2/authorize?client_id=724500548547641354&scope=bot&permissions=1276505175) | [Soporte](https://discord.gg/etbsV4x)**`
 				);
 			message.channel.send(embed1);
 		}

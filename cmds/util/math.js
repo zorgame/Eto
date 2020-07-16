@@ -13,11 +13,13 @@ module.exports = {
     const embed = new Discord.MessageEmbed().setColor(`64ffc4`);
 
     if (!args[0]) {
-      embed.setFooter("Por favor ingrese una `expresion`.");
+      embed.setDescription("Debes agregar alguna operación");
       return await message.channel.send(embed); // Devuelve un mensaje si es que ejecuta el comando sin nada
     }
-    let resultado;
-    try {
+    let resultado
+    
+   
+    	try {
       resultado = math.eval(args.join(" ")); // El Args toma el calculo
     } catch (e) {
       resultado = "error: Entrada Invalida"; // Cuando es incorrecta

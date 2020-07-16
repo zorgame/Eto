@@ -10,4 +10,4 @@ module.exports = (client) => {
           }
         };
         ["cliente", "servidores"].forEach(x => load(x));
-};//Lo mismo de comandos.js
+};

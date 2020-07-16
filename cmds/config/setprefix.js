@@ -27,7 +27,7 @@ module.exports = {
 		const collector = new MessageCollector(
 			message.channel,
 			m => m.author.id === message.author.id,
-			{ time: 10000 }
+			{ max : 1 }
 		);
 		// Definimos el colector
 

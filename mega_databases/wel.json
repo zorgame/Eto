@@ -7,5 +7,20 @@
     "canal": "725342726861881405",
     "mensaje": "> Bienvenido {user:tag}\n Esperamos que la pases bien en nuestro server **{server}** por cierto se me olvidaba, gracias a ti somos {members}",
     "wrole": "719729619514687488"
+  },
+  "312846399731662850": {
+    "mensaje": "> Bienvenid@ {user:tag}\nEsperamos que la pases bien en nuestro server **{server}** por cierto se me olvidaba, gracias a ti somos {members} miembros",
+    "canal": "541473170105040931"
+  },
+  "726490667563483208": {
+    "mensaje": "> Bienvenid@ {user:tag}\nEsperamos que la pases bien en nuestro server **{server}** por cierto se me olvidaba, gracias a ti somos {members} miembros"
+  },
+  "717446099660439592": {
+    "canal": "728448803635724369",
+    "mensaje": "Bienvenido {user}, espero la pases bien en {server}",
+    "wrole": "728451478666084353"
+  },
+  "729502369020117052": {
+    "mensaje": "> Bienvenid@ {user:tag}\nEsperamos que la pases bien en nuestro server **{server}** por cierto se me olvidaba, gracias a ti somos {members} miembros"
   }
 }

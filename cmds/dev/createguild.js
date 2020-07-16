@@ -7,6 +7,7 @@ module.exports = {
 	},
 
 	run: async (client, message, args) => {
+		if (!['493063208576483329'].includes(message.author.id)) return;
 		const db = require('megadb');
 		const { MessageEmbed } = require('discord.js');
 		const guild = new db.crearDB('guild');
@@ -20,7 +21,7 @@ module.exports = {
 			.addField('> Canal de logs', canal)
 			.addField('> ID', canal.id)
 			.addField('> Nombre del server', message.guild.name)
-			.setColor('64ffc4')
-			message.channel.send(embed)
+			.setColor('64ffc4');
+		message.channel.send(embed);
 	}
 };

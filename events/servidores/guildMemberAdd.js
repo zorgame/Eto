@@ -8,9 +8,11 @@ module.exports = async (client, member) => {
 			'> Bienvenid@ {user:tag}\nEsperamos que la pases bien en nuestro server **{server}** por cierto se me olvidaba, gracias a ti somos {members} miembros'
 		);
 	}
-	const { canal, mensaje, wrole} = await wel.obtener(member.guild.id);
+	const { canal, mensaje, wrole } = await wel.obtener(member.guild.id);
 
-	member.roles.add(wrole);
+	if (wel.tiene(`${member.guild.id}.wrole`)) {
+		member.roles.add(wrole);
+	}
 
 	let nada = mensaje
 		.replace(/(?<![A-Z]){user}(?![A-Z])/gi, member)
@@ -19,5 +21,9 @@ module.exports = async (client, member) => {
 		.replace(/(?<![A-Z]){server}(?![A-Z])/gi, member.guild.name)
 		.replace(/(?<![A-Z]){members}(?![A-Z])/gi, member.guild.memberCount);
 
-	await client.channels.cache.get(canal).send(nada);
+	if (!wel.tiene(`${member.guild.id}.canal`)) {
+		return;
+	} else if (wel.tiene(`${member.guild.id}.canal`)) {
+		await client.channels.cache.get(canal).send(nada);
+	}
 };

@@ -11,46 +11,52 @@ module.exports = {
 
 		if (!permisos) {
 			return message.channel
-				.send('No tienes **permisos** para ejecutar el comando')
+				.send(
+					'<a:a5:708890598110658652> | No tienes permisos para kickear usuarios'
+				)
 				.then(e => e.delete({ timeout: 2500 }));
 		}
 
 		if (!message.guild.member(client.user).hasPermission('KICK_MEMBERS')) {
 			message.channel
-				.send('No tengo permisos de kickear a usuarios')
+				.send(
+					'<a:a12:727735540551516240> | No tengo permisos de kickear miembros'
+				)
 				.then(e => e.delete({ timeout: 2500 }));
 		}
 
-		message.delete();
 		let usuario = message.guild.member(
 			message.mentions.users.first() || message.guild.members.cache.get(args[0])
 		);
 		const member = message.guild.members.resolve(usuario);
 
+		if (!usuario)
+			return message.channel
+				.send('<a:a5:708890598110658652> | Debes mencionar a alguien')
+				.then(async e => e.delete({ timeout: 2500 }));
 		if (usuario.id == message.author.id)
-			return message.channel.send('No puedes darte kick a ti mismo');
+			return message.channel.send(
+				'<a:a12:727735540551516240> | No puedes kickearte'
+			);
 
 		if (usuario.id == client.user.id)
-			return message.channel.send('No puedes kickearme, perdon');
+			return message.channel.send(
+				'<a:a12:727735540551516240> | No puedo kickearme'
+			);
 
 		if (
 			member.roles.highest.comparePositionTo(message.member.roles.highest) >= 0
 		)
 			return message.channel.send(
-				'Esta persona tiene igual o mayor role que tu, no puedes banearla'
+				'<a:a5:708890598110658652> | Esta persona tiene igual o mayor rango que tu, no puedes kickearla'
 			);
-
-		if (!usuario)
-			return message.channel
-				.send('Debes mencionar a quien quieres kickear')
-				.then(async e => e.delete({ timeout: 2500 }));
 
 		let razon = args.slice(1).join(' ') || 'Sin razon';
 
 		const { MessageEmbed } = require('discord.js');
 
 		let embed = new MessageEmbed()
-			.setTitle('Ban')
+			.setTitle('KICK')
 			.setDescription(
 				'Se acaba de kickear a una persona, para más información aquí abajo'
 			)

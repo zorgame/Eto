@@ -1,0 +1,54 @@
+{
+  "493063208576483329": {
+    "daño": 500,
+    "vida": 1250,
+    "nombre": "Tauros",
+    "velocidad": 750,
+    "defensa": 350,
+    "agilidad": 650,
+    "especial": 250,
+    "level": 100,
+    "xp": 3972,
+    "color": "65ff00",
+    "image": "https://i.imgur.com/PCBIrLa.png"
+  },
+  "654158118137233428": {
+    "daño": 600,
+    "vida": 1100,
+    "nombre": "Falcon Ice",
+    "velocidad": 200,
+    "defensa": 300,
+    "agilidad": 400,
+    "especial": 800,
+    "level": 2,
+    "xp": 61,
+    "color": "00e3ff",
+    "image": "https://i.imgur.com/LyjcFRF.png"
+  },
+  "534951970310586378": {
+    "daño": 500,
+    "vida": 1250,
+    "nombre": "Tauros",
+    "velocidad": 750,
+    "defensa": 350,
+    "agilidad": 650,
+    "especial": 250,
+    "level": 0,
+    "xp": 135,
+    "color": "65ff00",
+    "image": "https://i.imgur.com/PCBIrLa.png"
+  },
+  "332664883474857984": {
+    "daño": 700,
+    "vida": 1500,
+    "nombre": "Trotutor",
+    "velocidad": 600,
+    "defensa": 250,
+    "agilidad": 200,
+    "especial": 300,
+    "level": 0,
+    "xp": 5,
+    "color": "6000ec",
+    "image": "https://i.imgur.com/l1xtycx.png"
+  }
+}

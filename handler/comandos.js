@@ -35,7 +35,7 @@ module.exports = client => {
 				
 		} 
 	};
-	['util', 'config', 'dev', 'economia', 'administración'].forEach(x => load(x));
+	['util', 'config', 'dev', 'economia', 'administración', 'interaccion',"img"].forEach(x => load(x));
 	//Hacemos un array con las subcarpetas que habrán en la carpeta dominante (CMDS)
 	console.log(table.toString()); //NO TOCAR
 }; //Cierre de exportamiento

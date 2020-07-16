@@ -7,12 +7,13 @@ module.exports = {
 	},
 
 	run: async (client, message, args) => {
-		let permisos = message.member.hasPermission('MANAGE_MESSAGES');
+		
+		let permiso = message.member.hasPermission('MANAGE_MESSAGES');
 
-		if (!permisos) {
+		if (!permiso) {
 			return message.channel
 				.send('No tienes **permisos** para ejecutar el comando')
-				.then(e => e.delete({ timeout: 2500 }));
+				.then(e => e.delete({ timeout: 5000 }));
 		}
 
 		const db = require('megadb');

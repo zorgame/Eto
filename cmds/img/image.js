@@ -7,7 +7,7 @@ module.exports = {
 		nombre: 'imagen',
 		alias: ['image', 'img'],
 		descripcion: 'Busca cualquier imagen de google',
-		category: 'util'
+		category: 'img'
 	},
 	run: async (client, message, args) => {
 		var parts = message.content.split(' ');
@@ -40,7 +40,6 @@ module.exports = {
 			var urls = new Array(links.length)
 				.fill(0)
 				.map((v, i) => links.eq(i).attr('href'));
-			console.log(urls);
 			if (!urls.length) {
 				return;
 			}
@@ -151,6 +150,7 @@ module.exports = {
 					)
 					.then(mg => {
 						if (!mg.first()) return msg.edit('Ninguna reaccion registrada'); //Si no se detecta almenos una reacción luego del tiempo editamos mensaje
+					
 					});
 			});
 		});

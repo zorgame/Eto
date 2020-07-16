@@ -8,7 +8,7 @@ module.exports = {
 	},
 	run: async (client, message, args) => {
 		let permisos = message.channel.permissionsFor(message.member);
-		disableMentions: permisos.has('MENTION_EVERYONE') ? 'none' : 'everyone';
+	message.delete() 
 		if (!args[0]) return message.channel.send('Agrega un texto para decir 😳');
 		message.channel.send(args.join(' '), { disableMentions: 'all' })
 	}

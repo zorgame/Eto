@@ -20,7 +20,7 @@ module.exports = {
 					usuario[0]
 				}\n            Nivel: ${usuario[1]}\n            XP: ${
 					usuario[2]
-				} / ${5 * usuario[1] ** 2 + 50 + usuario[1] + 100} `)
+				} / ${10 * usuario[1] ** 2 + 200 + usuario[1] + 200} `)
 		);
 
 		let pagina = [];
