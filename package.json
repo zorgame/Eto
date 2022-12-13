@@ -18,7 +18,7 @@
     "discord.js-tictactoe": "^1.0.2",
     "easy.database": "^0.0.7",
     "eris": "^0.13.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "figlet": "^1.4.0",
     "glitch-automaticping": "^1.0.2",
     "imdb-api": "^4.1.1",
